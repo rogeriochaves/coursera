@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>React Template en Latam Paas</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="layout" content="personas" />
+  <meta content="Cambieme por favor" name="description">
+  <meta content="cambie, me, por, favor" name="keywords">
+  <script>
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','undefined');
+</script>
+  <link rel="shortcut icon" type="image/x-icon" href="https://s.latamstatic.com/static/latam/images/favicon/LATAM/favicon.ico">
+  <link rel="stylesheet" href="https://s.latamstatic.com/layout/ui/3/css/bootstrap.min.css" type="text/css">
+  <link rel="stylesheet" href="https://s.latamstatic.com/layout/ui/3/css/global.min.css" type="text/css">
+  <link rel="stylesheet" href="https://s.latamstatic.com/layout/ui/3/css/latam-mu.min.css" type="text/css">
+</head>
+<body>
+  <noscript>
+  <iframe src="https://www.googletagmanager.com/ns.html?id=undefined" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+
+  
+    <link rel="stylesheet" href="https://backoffice.int.latam.com/header-footer/static/stylesheets/header.css" />
+    <div class="header__section">
+      <!-- Skip to main content -->
+      <div class="header__container">
+        <a class="focusable-link" href="#mainContent">
+          <span>
+            Saltar al contenido principal
+          </span>
+        </a>
+      </div>
+      <!-- Header latam -->
+      <header class="header" role="banner">
+        <div class="header__container">
+          <div class="header__logo">
+            <a href="/">
+              <img src="https://s.latamstatic.com/static/latam/images/content-image/header/latam-logo-sticky.svg" alt="LATAM Logo" class="hidden-mobile"
+              />
+              <img src="https://s.latamstatic.com/static/latam/images/content-image/header/logo-latam-mu.svg" alt="LATAM Logo" class="visible-mobile logo-mobile"
+              />
+            </a>
+          </div>
+          <ul class="menu is-hidden">
+            <li>
+              <a href="https://www.latam.com/es_cl/centro-de-ayuda/contacto/" aria-label="Centro de Ayuda"
+                target="_blank" class="menu__item hidden-mobile">
+                <span class="hidden-mobile">
+                  Centro de Ayuda
+                </span>
+                <img src="https://s.latamstatic.com/content/dam/LATAM/resources/icons/int015.svg" alt="Centro de Ayuda"
+                  height="28" width="28" class="visible-mobile" aria-hidden="true" />
+              </a>
+            </li>
+            <li class="hidden-mobile js-signup-button">
+              <a href="https://www.latam.com/es_cl/apps/personas/customerportal" target="_blank" class="menu__item menu__item--bordered">
+                Inscríbete
+              </a>
+            </li>
+            <li class="user-menu user-menu--logged-out">
+              <a href="https://www.latam.com/cgi-bin/site_login.cgi?page=" class="user-menu__information user-menu__information--login js-login">
+                <span class="hidden-mobile">Iniciar sesión</span>
+                <span class="icon user-menu__icon visible-mobile"></span>
+              </a>
+            </li>
+            <li class="user-menu user-menu--logged-in js-close-menu">
+              <a href="#" class="user-menu__information js-toggle-menu">
+                <span class="icon user-menu__icon"></span>
+                <div class="user-menu__textInformation">
+                  <span class="user-menu__welcome">
+                    Hola
+                    <span class="js-user-name"></span>
+                  </span>
+                  <span class="user-menu__points">
+                    Tienes
+                    <span class="js-user-points"></span>
+                    <span class="js-program-points">
+                      Puntos
+                    </span>
+                    <span class="js-program-kms">
+                      KMS
+                    </span>
+                  </span>
+                </div>
+              </a>
+              <div class="user-menu__container">
+                <div class="user-menu__card visible-mobile">
+                  <div class="user-menu__badge"></div>
+                </div>
+
+                <div class="user-menu__title visible-mobile">
+                  <span>Gestiona tu cuenta</span>
+                </div>
+                <ul class="user-menu__options">
+                  <a href="https://www.latam.com/es_cl/apps/personas/customerportal#dashboard">
+                    <li class="user-menu__option">
+                      Mi perfil
+                      <span class="menu-arrow visible-mobile"></span>
+                    </li>
+                  </a>
+                  <a href="https://www.latam.com/es_cl/apps/personas/mybookings">
+                    <li class="user-menu__option">
+                      Mis Viajes
+                      <span class="menu-arrow visible-mobile"></span>
+                    </li>
+                  </a>
+                  <a href="http://www.lan.com/cgi-bin/frequent_flyer/account_status.cgi">
+                    <li class="user-menu__option">
+                      Estado de cuenta
+                      <span class="menu-arrow visible-mobile"></span>
+                    </li>
+                  </a>
+                  
+                      <a href="https://www.latam.com/es_cl/apps/personas/upg">
+                        <li class="user-menu__option">
+                          Postulación Upgrade
+                          <span class="menu-arrow visible-mobile"></span>
+                        </li>
+                      </a>
+                </ul>
+                <div class="user-menu__logout">
+                  <a href="https://www.latam.com/cgi-bin/login/logout.cgi?page=" class="js-login">
+                    Cerrar sesión
+                  </a>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </header>
+    </div>
+    <script async src="https://backoffice.int.latam.com/header-footer/static/scripts/header.js"></script>
+
+  <main class="container" role="main">
+    <noscript>lan.MSG_JAVASCRIPT_DESHABILITADO</noscript>
+    <div id="mainContent"><div data-reactroot="" data-reactid="1" data-react-checksum="724601634"><div data-reactid="2"><hr data-reactid="3"/><nav class="clearfix" data-reactid="4"><ul class="nav navbar-nav" data-reactid="5"><li data-reactid="6"><a href="/" data-reactid="7">reacttemplate.MENU_HOME</a></li><li data-reactid="8"><a id="searchLink" href="/busqueda" data-reactid="9">reacttemplate.MENU_SEARCH</a></li></ul></nav><hr data-reactid="10"/></div><!-- react-empty: 11 --></div></div>
+  </main>
+  <script>
+  window.env = {
+    SERVICE_ENVIRONMENT: "int"
+  };
+</script>
+  <script src="https://backoffice.int.latam.com/es_cl/app/reacttemplate/dist/bundle.c7aeccb2fcce4f3ae14a.js"></script>
+
+  <link rel="stylesheet" href="https://backoffice.int.latam.com/header-footer/static/stylesheets/footer.css" />
+<footer role="contentinfo">
+  <div class="footer-container">
+    <div class="footer-brand">
+      <img src="https://www.latam.com/static/latam/images/design-image/latam/logo-footer.svg" alt="LATAM Airlines logo">
+    </div>
+    <div class="footer-text">
+      <p>
+        <span>© 2018 LATAM Airlines Chile</span>
+        <span class="hidden-mobile">Av. Américo Vespucio 901, Renca, Santiago de Chile</span>
+        <span class="hidden-mobile">600 526 2000</span>
+        <span class="visible-mobile">Todos los derechos reservados.</span>
+      </p>
+    </div>
+  </div>
+</footer>
+
+
+</body>
+</html>
