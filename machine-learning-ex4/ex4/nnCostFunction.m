@@ -106,7 +106,14 @@ J = 1 / m * sum_m + regularization;
 % =========================================================================
 
 % Unroll gradients
-grad = 1 / m * [Theta1_grad(:) ; Theta2_grad(:)];
+
+% Regularization
+Theta1(:,1) = 0; % remove bias unit
+Theta1_grad = 1 / m * Theta1_grad + lambda / m * Theta1;
+Theta2(:,1) = 0; % remove bias unit
+Theta2_grad = 1 / m * Theta2_grad + lambda / m * Theta2;
+
+grad = [Theta1_grad(:) ; Theta2_grad(:)];
 
 
 end
