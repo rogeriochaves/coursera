@@ -69,22 +69,25 @@ end
 
 sum_m = 0;
 for index = 1:m # For each training case
-  sum_k = 0;
-
   # Feed Forward
   a1 = transpose(X(index,:));
   a1 = [1;a1]; % bias unit
-  a2 = sigmoid(Theta1 * a1);
+  z2 = Theta1 * a1;
+  a2 = sigmoid(z2);
   a2 = [1;a2]; % bias unit
-  a3 = sigmoid(Theta2 * a2);
+  z3 = Theta2 * a2;
+  a3 = sigmoid(z3);
 
-  # Cost for this case
-  for k = 1:num_labels
-    y_ = y_one_hot(index, k);
-    h0 = a3(k);
-    sum_k += -y_ * log(h0) - (1 - y_) * log(1 - h0);
-  end
-  sum_m += sum_k;
+  # Back Propagation
+  delta3 = a3 - transpose(y_one_hot(index, :));
+  delta2 = (transpose(Theta2) * delta3)(2:end) .* sigmoidGradient(z2);
+  Theta2_grad += delta3 * transpose(a2);
+  Theta1_grad += delta2 * transpose(a1);
+
+  # Cost
+  y_ = y_one_hot(index, :);
+  h0 = a3;
+  sum_m += -y_ * log(h0) - (1 - y_) * log(1 - h0);
 end
 
 Thetha1_nobias = Theta1(1:hidden_layer_size, 2:(input_layer_size + 1)); % 25x400
@@ -103,7 +106,7 @@ J = 1 / m * sum_m + regularization;
 % =========================================================================
 
 % Unroll gradients
-grad = [Theta1_grad(:) ; Theta2_grad(:)];
+grad = 1 / m * [Theta1_grad(:) ; Theta2_grad(:)];
 
 
 end
