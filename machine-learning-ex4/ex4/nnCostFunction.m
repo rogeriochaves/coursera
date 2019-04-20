@@ -62,14 +62,13 @@ Theta2_grad = zeros(size(Theta2));
 %               and Theta2_grad from Part 2.
 %
 
-y_one_hot = zeros(size(y, 1), 10);
+y_one_hot = zeros(size(y, 1), num_labels);
 for index = 1:size(y, 1)
   y_one_hot(index, y(index)) = 1;
 end
 
-K = 10;
 sum_m = 0;
-for index = 1:m # For each training item
+for index = 1:m # For each training case
   sum_k = 0;
 
   # Feed Forward
@@ -79,8 +78,8 @@ for index = 1:m # For each training item
   a2 = [1;a2]; % bias unit
   a3 = sigmoid(Theta2 * a2);
 
-  # Cost for this item
-  for k = 1:K
+  # Cost for this case
+  for k = 1:num_labels
     y_ = y_one_hot(index, k);
     h0 = a3(k);
     sum_k += -y_ * log(h0) - (1 - y_) * log(1 - h0);
@@ -88,7 +87,14 @@ for index = 1:m # For each training item
   sum_m += sum_k;
 end
 
-J = 1 / m * sum_m;
+Thetha1_nobias = Theta1(1:hidden_layer_size, 2:(input_layer_size + 1)); % 25x400
+Thetha2_nobias = Theta2(1:num_labels, 2:(hidden_layer_size + 1)); % 10x25
+regularization = lambda / (2 * m) * ( ...
+  sum(sum(Thetha1_nobias .^ 2)) + ...
+  sum(sum(Thetha2_nobias .^ 2)) ...
+);
+
+J = 1 / m * sum_m + regularization;
 
 
 
