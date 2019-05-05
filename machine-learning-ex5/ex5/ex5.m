@@ -216,5 +216,15 @@ for i = 1:length(lambda_vec)
             lambda_vec(i), error_train(i), error_val(i));
 end
 
+close all;
+figure(1);
+plot(lambda_vec, error_train, lambda_vec, error_val);
+
+title('Polynomial Regression Learning Curve');
+xlabel('Lambda')
+ylabel('Error')
+axis([0 13 0 100])
+legend('Train', 'Cross Validation')
+
 fprintf('Program paused. Press enter to continue.\n');
 pause;
