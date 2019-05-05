@@ -9,15 +9,13 @@ function [J, grad] = linearRegCostFunction(X, y, theta, lambda)
 m = length(y); % number of training examples
 
 % You need to return the following variables correctly
+
 h = X * theta;
 J = 1 / (2 * m) * (sum(sum((h - y) .^ 2)));
-
 % Regularization
 theta_ = theta;
 theta_(1) = 0;
 J += lambda / (2 * m) * (sum(sum(theta_ .^ 2)));
-
-grad = zeros(size(theta));
 
 grad = 1 / m * transpose(X) * (h - y) + (lambda / m) * theta_;
 
